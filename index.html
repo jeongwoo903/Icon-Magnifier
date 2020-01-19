@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Icon Magnifier</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="bg" x="0" y="0" width="0.1" height="0.17">
+          <g>
+            <rect fill="#6441a4" />
+            <path
+              class="outline"
+              d="M 33 30 H 118 V 88 L 94 113 H 75 L 63 125 H 50 V 113 H 27 V 46z"
+            />
+            <path
+              class="inline"
+              d="M 41 38 H 109 V 84 L 96 98 H 73 L 60 110 V 98 H 41z"
+            />
+            <g>
+              <rect class="left-eye" x="64" y="55" />
+              <rect class="right-eye" x="87" y="55" />
+            </g>
+          </g>
+        </pattern>
+        <mask id="mag-inside">
+          <circle cx="0" cy="0" r="210" />
+        </mask>
+      </defs>
+      <g mask="url(#mag-inside)">
+        <rect class="bg-fill" x="0" y="0" width="100%" height="100%" />
+      </g>
+      <circle id="magnifier" cx="0" cy="0" r="210" />
+    </svg>
+    <script src="script.js"></script>
+  </body>
+</html>
